@@ -15,6 +15,12 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -25,6 +31,48 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      .notification {
+          text-decoration: none;
+          position: relative;
+          display: inline-block;
+      }
+
+      .notification .badge {
+          position: absolute;
+          top: -8px;
+          right: -10px;
+          padding: 5px 10px;
+          border-radius: 50%;
+          background-color: red;
+          color: white;
+      }
+      .modal-dialog {
+          max-width: 80%;
+          margin: 1.75rem auto;
+      }
+      .modal { overflow: auto !important; }
+      tr.hide-table-padding td {
+        padding: 0;
+      }
+
+      .expand-button {
+        position: relative;
+      }
+
+      .accordion-toggle .expand-button:after
+      {
+        position: absolute;
+        left:.75rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        content: '-';
+      }
+      .accordion-toggle.collapsed .expand-button:after
+      {
+        content: '+';
+      }
+  </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -40,4 +88,4 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
-</html>
+  </html>
